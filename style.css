@@ -8,8 +8,16 @@ body,
 html {
   width: 100%;
   height: 100%;
-  background-color: rgba(9, 42, 76, 0.677);
 }
+body {
+  background-color: rgba(142, 177, 212, 0.92);
+}
+.heading{
+  text-align: center;
+  font-weight: 500;
+  color: rgb(211, 241, 231);
+}
+
 .input-field-container {
   display: flex;
   justify-content: center;
@@ -19,8 +27,8 @@ html {
 .inner {
   display: flex;
   padding: 0.4em;
-  border: 2px solid #fff;
-  border-radius: 0.4rem;
+  border: 2px solid rgba(95, 104, 118, 0.853);
+  border-radius: 0.3rem;
 }
 [type="text"] {
   height: 5.5rem;
@@ -32,15 +40,39 @@ html {
   border-radius: none;
   font-size: large;
   font-weight: 500;
-  color: antiquewhite;
+  color: rgb(92, 83, 72);
 }
 [type="button"] {
   border: none;
   padding: 0.1rem;
   border-radius: 0.3rem;
   font-weight: 600;
-  color: rgba(65, 146, 226, 0.93);
-  border: 1px solid rgb(28, 24, 24);
+  background: #ffa600c6;
+  color: rgba(11, 11, 11, 0.93);
+  border: 1px solid rgba(95, 104, 118, 0.853);
+}
+.error-container{
+  display: flex;
+  justify-content: center;
+}
+.sub-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(241, 239, 235); */
+  /* border: 2px solid #fff ; */
+  /* border-radius: 0.4rem; */
+  /* padding: 1rem; */
+  /* display: none; */
+}
+.error{
+color: red;
+}
+#cancelBtn{
+  display: none;
+  margin-left: 0.3rem;
+  height: 1.5rem;
+  cursor: pointer;
 }
 .result {
   display: flex;
@@ -57,12 +89,33 @@ html {
   align-items: center;
   height: 2.5rem;
   width: 6.5rem;
-  border: 2px solid orange;
-  margin-top: 25%;
-  background: transparent;
-  color: antiquewhite;
+  margin-top: 1%;
+  border: 2px solid rgba(95, 104, 118, 0.853);
   border-radius: 0.3rem;
-  color: orange;
+  color: rgb(99, 93, 81);
   font-weight: 700;
   font-size: larger;
+}
+.hiddn-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+#reactionImg {
+  display: none;
+  margin: none;
+  padding: none;
+  height: 19rem;
+  mix-blend-mode: darken;
+}
+@media (max-width: 670px) {
+  #reactionImg {
+    display: none;
+    height: 14rem;
+    mix-blend-mode: darken;
+  }
+  [type="text"] {
+    width: 78vw;
+    height: 2rem;
+  }
 }
